@@ -1,11 +1,16 @@
-export default function Home() {
+import { Button } from "@mui/material";
+import VisitorList from "../../src/components/visitor_list";
+import Link from "next/link";
+
+export default function HomePage() {
   return (
     <>
+      <Link className="register_button" href={"/register"}>
+        {" "}
+        방명록 등록하러 가기{" "}
+      </Link>
       <div>
-        <label>방문한 카페이름</label>
-        <input type="text" />
-        <label>닉네임</label>
-        <input type="text" />
+        <VisitorList></VisitorList>
       </div>
     </>
   );
