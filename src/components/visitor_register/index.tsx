@@ -12,8 +12,11 @@ import Link from "next/link";
 import { collection, addDoc, getFirestore } from "firebase/firestore/lite";
 import { firebaseApp } from "../../lib/firbase";
 import { ChangeEvent, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function VisitorRegister() {
+  const router = useRouter();
+
   const [values, setValues] = useState({
     name: "",
     content: "",
@@ -29,6 +32,8 @@ export default function VisitorRegister() {
       content: values.content,
       yn: "y",
     });
+
+    router.push("/myowngarden");
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
