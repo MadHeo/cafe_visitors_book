@@ -1,14 +1,15 @@
 export const userData = [
   {
-    name: "디디",
-    description: "이 카페 너무 좋아요",
+    name: "다니",
+    description:
+      "날씨가 좋으니, 마음도 따뜻해지네요. 가을에 오면 최고의 카페입니다.",
     date: "2023-08-12",
     contact: "@ffese",
     location: "카페오운완",
     img: "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220828_120%2F16616825817770trS7_JPEG%2F48A1A10E-213E-43B4-AC2C-834DBFC3D838.jpeg",
   },
   {
-    name: "대닌",
+    name: "콜라먹어",
     description: "연락 주세요~!",
     date: "2023-08-15",
     contact: "@manifest",

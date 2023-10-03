@@ -2,29 +2,3 @@
   margin: 0px;
   box-sizing: border-box;
 }
-
-.cardBox {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-.register_button {
-  margin-bottom: 32px;
-  border: 2px solid blue;
-  padding: 5px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-.register_box {
-  width: 400px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.register_box div:first-child {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 32px;
-}
