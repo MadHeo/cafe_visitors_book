@@ -12,6 +12,8 @@ import { firebaseApp } from "../../lib/firbase";
 import { MasonryGrid } from "@egjs/react-grid";
 import AddIcon from "@mui/icons-material/Add";
 import { format } from "date-fns";
+import Image from "next/image";
+import logo from "../../../public/img/logo_4.png";
 
 interface IPost {
   content: string;
@@ -123,6 +125,17 @@ export default function VisitorList() {
             ))}
           </MasonryGrid>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          backgroundColor: "rgba(251, 251, 251, 0)",
+        }}
+      >
+        <Image src={logo} alt=""></Image>
       </Box>
     </>
   );

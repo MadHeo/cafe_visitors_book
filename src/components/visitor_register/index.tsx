@@ -13,6 +13,8 @@ import { collection, addDoc, getFirestore } from "firebase/firestore/lite";
 import { firebaseApp } from "../../lib/firbase";
 import { ChangeEvent, useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import logo from "../../../public/img/logo_4.png";
 
 export default function VisitorRegister() {
   const router = useRouter();
@@ -116,6 +118,16 @@ export default function VisitorRegister() {
           </Link>
         </Box>
       </Stack>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        <Image src={logo} alt=""></Image>
+      </Box>
     </>
   );
 }
