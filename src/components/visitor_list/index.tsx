@@ -14,6 +14,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { format } from "date-fns";
 import Image from "next/image";
 import logo from "../../../public/img/logo_4.png";
+import { filterBadWords } from "../../lib/filterBadWords";
 
 interface IPost {
   content: string;
@@ -25,6 +26,8 @@ interface IPost {
 
 export default function VisitorList() {
   const [postData, setPostData] = useState<any>();
+
+  const filter = filterBadWords;
 
   const getPost = async () => {
     const post = collection(getFirestore(firebaseApp), "post");
@@ -108,14 +111,14 @@ export default function VisitorList() {
                     marginBottom={"16px"}
                     sx={{ wordBreak: "break-all" }}
                   >
-                    {el.content}
+                    {filter(el.content)}
                   </Typography>
                   <Typography
                     fontWeight={500}
                     variant="body2"
                     color="text.secondary"
                   >
-                    {el.name}
+                    {filter(el.name)}
                   </Typography>
                   <Typography fontSize={"0.8rem"} variant="body2" color="gray">
                     {el.create_at.split(" ")[0]}
