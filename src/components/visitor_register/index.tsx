@@ -82,7 +82,7 @@ export default function VisitorRegister() {
                 multiline
                 rows={10}
                 inputProps={{ maxLength: 300 }}
-                placeholder="비하·비방·욕설이 담긴 게시물은 삭제될 수 있습니다. 최대 300자까지 입력할 수 있습니다."
+                placeholder="비하·비방·욕설이 담긴 게시물은 삭제될 수 있습니다. 언젠간 추억이 될 당신의 흔적을 남겨보세요. 최대 300자까지 입력할 수 있습니다."
               />
             </Box>
             <Box
@@ -109,7 +109,6 @@ export default function VisitorRegister() {
               size="large"
               sx={{
                 marginTop: "12px",
-
                 width: "100%",
               }}
             >
