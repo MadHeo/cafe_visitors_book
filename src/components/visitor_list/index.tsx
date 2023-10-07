@@ -28,7 +28,6 @@ export default function VisitorList() {
   const [postData, setPostData] = useState<any>();
 
   const filter = filterBadWords;
-
   const getPost = async () => {
     const post = collection(getFirestore(firebaseApp), "post");
     const result = await getDocs(query(post, orderBy("create_at", "desc")));
