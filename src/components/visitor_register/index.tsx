@@ -32,8 +32,7 @@ export default function VisitorRegister() {
     void addDoc(post, {
       name: name,
       store: "마이오운가든",
-      // create_at: format(new Date(), "yyy-MM-dd HH:mm:ss"),
-      create_at: new Date().toISOString().split("T")[0],
+      create_at: format(new Date(), "yyy-MM-dd HH:mm:ss"),
       content: contents,
       yn: "y",
     });
@@ -91,6 +90,7 @@ export default function VisitorRegister() {
               name="content"
               onChange={onChangeContent}
               rows={10}
+              multiline
               inputProps={{ maxLength: 300 }}
               placeholder="비하·비방·욕설이 담긴 게시물은 삭제될 수 있습니다. 언젠간 추억이 될 당신의 흔적을 남겨보세요. 최대 300자까지 입력할 수 있습니다."
             />
