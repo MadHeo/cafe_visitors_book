@@ -16,7 +16,7 @@ import Image from "next/image";
 import logo from "../../../public/img/logo_4.png";
 import { filterBadWords } from "../../lib/filterBadWords";
 
-interface IPost {
+declare interface IPost {
   content: string;
   create_at: string;
   name: string;
@@ -79,7 +79,7 @@ export default function VisitorList() {
           </Link>
         </Box>
         <Box sx={{ marginBottom: "24px" }}>
-          <Typography fontSize={"1.7rem"} color={"#626262"}>
+          <Typography fontSize={"1.7rem"} color={"#484848"}>
             my own garden
           </Typography>
         </Box>
@@ -106,7 +106,7 @@ export default function VisitorList() {
                   <Typography
                     fontSize={"1rem"}
                     variant="body1"
-                    color="text.secondary"
+                    color="#3b3b3b"
                     marginBottom={"16px"}
                     sx={{ wordBreak: "break-all" }}
                   >
@@ -117,7 +117,18 @@ export default function VisitorList() {
                     variant="body2"
                     color="text.secondary"
                   >
-                    {filter(el.name)}
+                    {el.name.charAt(0) === "@" ? (
+                      <a
+                        href={`https://www.instagram.com/${
+                          el.name.split("@")[1]
+                        }`}
+                        id="insta_click"
+                      >
+                        {filter(el.name)}
+                      </a>
+                    ) : (
+                      filter(el.name)
+                    )}
                   </Typography>
                   <Typography fontSize={"0.8rem"} variant="body2" color="gray">
                     {el.create_at.split(" ")[0]}
